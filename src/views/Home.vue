@@ -17,13 +17,9 @@ export default class Home extends Vue {
 
   public mounted() {
     const self: Home = this;
-    (window as any).testFunc = function(text: string) {
+    (window as any).testFunc = (text: string) => {
       self.testText = text;
     };
-  }
-
-  public destroyed() {
-    window.removeEventListener("testFunc", this.testFunc as any, false);
   }
 
   public callNativeFunc() {

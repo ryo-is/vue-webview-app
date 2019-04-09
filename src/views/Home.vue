@@ -34,7 +34,7 @@ export default class Home extends Vue {
   public async getAPITest() {
     const result: any = await axios({
       method: "GET",
-      url: apiUrl + "get"
+      url: apiUrl + "getReq"
     });
     console.log(result);
   }
@@ -42,7 +42,7 @@ export default class Home extends Vue {
   public async postAPITest() {
     const result: any = await axios({
       method: "POST",
-      url: apiUrl + "post"
+      url: apiUrl + "postReq"
     });
     console.log(result);
   }

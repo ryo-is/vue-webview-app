@@ -4,8 +4,8 @@
     <h1>{{ title }}</h1>
     <p>{{ testText }}</p>
     <el-button type="primary" @click="callNativeFunc()">Test</el-button>
-    <el-button type="primary" @click="gqlQuery()">Query</el-button>
-    <el-button type="primary" @click="gqlMutation()">Mutation</el-button>
+    <!-- <el-button type="primary" @click="gqlQuery()">Query</el-button>
+    <el-button type="primary" @click="gqlMutation()">Mutation</el-button> -->
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default class Home extends Vue {
   }
 
   public callNativeFunc() {
-    alert("{key: \"Message From WebView\", value: 999}");
+    alert(JSON.stringify({key: "Message From WebView", value: 999}));
   }
 
   public gqlQuery() {

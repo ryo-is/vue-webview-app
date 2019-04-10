@@ -35,14 +35,6 @@ export default class Home extends Vue {
     alert(reqBody);
   }
 
-  public gqlQuery() {
-    alert("{action: \"query\"}");
-  }
-
-  public gqlMutation() {
-    alert("{action: \"mutation\"}");
-  }
-
   public testFunc(text: string) {
     this.testText = text;
   }

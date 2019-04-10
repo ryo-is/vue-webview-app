@@ -20,7 +20,19 @@ export default class Home extends Vue {
   }
 
   public callNativeFunc() {
-    alert(JSON.stringify({key: "Message From WebView", value: 999}));
+    const reqBody: string = JSON.stringify(
+      {
+        action: "createUserSetting",
+        body: {
+          nickName: this.nickName,
+          birthday: this.birthday,
+          gender: this.gender,
+          ridingStartYear: this.ridingStartYear,
+          area: this.area
+        }
+      }
+    );
+    alert(reqBody);
   }
 
   public gqlQuery() {

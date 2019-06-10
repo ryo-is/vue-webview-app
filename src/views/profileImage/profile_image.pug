@@ -1,2 +1,4 @@
 .profile-image
-  input(type="file", accept=".png, .jpg, .jpeg")
+  .title Upload Image
+  img(:src="uploadImage")
+  input(type="file", accept="image/png, image/jpg, image/jpeg", @change="selectedFile($event)")
